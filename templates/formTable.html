@@ -1,0 +1,21 @@
+
+<h4>Successfully Registered Users</h4>
+<table border="1">
+    <tr>
+        <th>FirstName</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+
+{% for item in data %}
+<tr>
+    <td>{{item[1]}}</td>
+    <td>{{item[2]}}</td>
+    <td>
+        <a href="/register?id={{item[0]}}"><button>Edit</button></a>
+        <a href="/delete?id={{item[0]}}"><button>Delete</button></a>
+    </td>
+    
+</tr>
+{% endfor %}
+</table>

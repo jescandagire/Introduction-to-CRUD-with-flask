@@ -1,0 +1,20 @@
+{% if data: %}
+    <form action="edit_user" method="POST">
+        <legend> Edit information</legend>
+        <label>Enter your name:</label><input type="text" name="firstName" value="{{data[1]}}"><br>
+        <label>Enter your email:</label><input type="text" name="email" value="{{data[2]}}"><br>
+        <input type="hidden" name="id" value="{{data[0]}}"><br>
+        <input type="submit" name="submit">
+    </form>
+{% else: %}
+    <form action="register" method="POST">
+        <legend> Register with us</legend>
+        <label>Enter your name:</label><input type="text" name="firstName" value=""><br>
+        <label>Enter your email:</label><input type="text" name="email" value=""><br>
+        <input type="submit" name="submit">
+    </form>
+{% endif %}
+
+
+
+
